@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            min-width: 360px;
+        }
+
+        .header {
+            background: #3F51B5;
+        }
+
+        .main {
+            max-width: 800px;
+            padding: 32px 8px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .search {
+            overflow: hidden;
+            max-width: 800px;
+            padding: 0 8px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .search__title {
+            font-size: 18px;
+            margin: 16px 0 8px;
+            color: #fff;
+        }
+
+        .search__input {
+            height: 40px;
+            width: 100%;
+            padding: 0 16px;
+            box-sizing: border-box;
+            border: #ccc 1px solid;
+            border-radius: 2px;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .search__error {
+            height: 16px;
+            margin: 8px 0 8px;
+            font-size: 12px;
+            color: #F44336;
+        }
+
+        .hint {
+            overflow: hidden;
+
+        }
+
+        .hint__description {
+            text-align: center;
+            margin: 100px 0;
+            font-size: 18px;
+            color: #777;
+            font-weight: 400;
+        }
+
+        .report {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .report__row {
+            border: 1px #ccc solid;
+
+        }
+
+        .report__column {
+            width: 60%;
+            padding: 8px;
+        }
+
+        .report__column_name {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="root">
+    <header class="header">
+        <form class="search">
+            <h1 class="search__title">Проверка авто по номерному знаку</h1>
+            <input class="search__input" placeholder="Номерной знак авто">
+            <p class="search__error"></p>
+        </form>
+    </header>
+    <main class="main">
+        <div class="hint" hidden>
+            <h1 class="hint__description">Введите номерной знак автомобиля (например AA9999AI) и нажмине Enter</h1>
+        </div>
+
+        <table class="report">
+            <tr class="report__row">
+                <td class="report__column report__column_name">Владелец:</td>
+                <td class="report__column">Попов Юрий Анатольевич</td>
+            </tr>
+            <tr class="report__row">
+                <td class="report__column report__column_name">Год производства:</td>
+                <td class="report__column">2015</td>
+            </tr>
+            <tr class="report__row">
+                <td class="report__column report__column_name">Колличество владельцев:</td>
+                <td class="report__column">5</td>
+            </tr>
+            <tr class="report__row">
+                <td class="report__column report__column_name">Факты ДДП:</td>
+                <td class="report__column report__column_name">0</td>
+            </tr>
+        </table>
+    </main>
+</div>
+
+</body>
+</html>
